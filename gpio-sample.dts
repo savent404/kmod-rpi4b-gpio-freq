@@ -1,0 +1,15 @@
+/dts-v1/;
+/plugin/;
+/ {
+    compatible="brcm,brcm2711";
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            arduino: arduino_gpio {
+                gpios = <&gpio 21 0x00>;
+                compatible = "gpio-sample";
+                status = "ok";
+            };
+        };
+    };
+};
